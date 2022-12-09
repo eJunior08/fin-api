@@ -1,0 +1,7 @@
+{
+  "name": "fin-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/eJunior08/fin-api.git",
+  "license": "MIT"
+}
