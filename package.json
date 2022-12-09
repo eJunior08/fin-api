@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/eJunior08/fin-api.git",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
   "dependencies": {
     "express": "^4.18.2"
   },
