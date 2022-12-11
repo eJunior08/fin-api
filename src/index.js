@@ -133,4 +133,14 @@ app.get("/account", (request, response) => {
   return response.json(customer);
 });
 
+app.delete("/account", (request, response) => {
+  const { customer } = request;
+
+  const indexToDelete = customers.findIndex(({ cpf }) => cpf === customer.cpf);
+
+  customers.splice(indexToDelete, 1);
+
+  return response.status(200).json(customers);
+});
+
 app.listen(3333);
