@@ -22,6 +22,16 @@ function verifyIfExistAccountCPF(request, response, next) {
   return next();
 }
 
+function getBalance(statement) {
+  return statement.reduce((accumulator, operation) => {
+    if (operation.type === "credit") {
+      return accumulator + operation.amount;
+    }
+
+    return accumulator - operation.amount;
+  }, 0);
+}
+
 /**
  * cpf - string
  * name - string
